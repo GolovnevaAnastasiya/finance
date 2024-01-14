@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Reset
+{% endblock %}
+
+{% block main %}
+    <form action="/reset" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus required class="form-control" name="password" placeholder="Текущий пароль" type="password">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" required class="form-control" name="new_password" placeholder="Новый пароль" type="password">
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" required class="form-control" name="confirmation" placeholder="Повторите Новый пароль" type="password">
+        </div>
+        <button class="btn btn-dark" type="submit">Изменить пароль</button>
+    </form>
+{% endblock %}
